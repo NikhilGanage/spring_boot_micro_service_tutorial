@@ -1,3 +1,5 @@
+#this configuration registers to eureka server
+
 server:
   port: 6070
   
