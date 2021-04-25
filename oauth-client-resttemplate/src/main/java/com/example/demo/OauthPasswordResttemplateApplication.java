@@ -9,10 +9,10 @@ import org.springframework.security.oauth2.client.token.grant.client.ClientCrede
 import org.springframework.security.oauth2.client.token.grant.password.ResourceOwnerPasswordResourceDetails;
 
 @SpringBootApplication
-public class OauthClientResttemplateApplication {
+public class OauthPasswordResttemplateApplication {
 
 	public static void main(String[] args) {
-		ConfigurableApplicationContext context = SpringApplication.run(OauthClientResttemplateApplication.class, args);
+		ConfigurableApplicationContext context = SpringApplication.run(OauthPasswordResttemplateApplication.class, args);
 		
 		OAuth2RestTemplate template = context.getBean(OAuth2RestTemplate.class);
 		
