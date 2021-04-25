@@ -1,0 +1,29 @@
+package com.example.demo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
+
+import com.example.demo.domain.Customer;
+
+@SpringBootApplication
+@EnableResourceServer
+public class OauthClientcredGrantTypeApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(OauthClientcredGrantTypeApplication.class, args);
+	}
+	
+	@Bean
+	public Customer customer() {
+		return new Customer(101,"Mahesh",123456789);
+	}
+	
+	@Bean
+	public BCryptPasswordEncoder encoder() {
+		return new BCryptPasswordEncoder();
+	}
+
+}
